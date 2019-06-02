@@ -13,9 +13,17 @@ public class CatController {
     private CatService catService;
 
 
-    @GetMapping
+    @GetMapping("/")
     public String getAllCats(Model model) {
         model.addAttribute("cats", catService.getAllCats());
+
         return "index";
+    }
+
+    @GetMapping("/top")
+    public String top10Cats(Model model) {
+        model.addAttribute("cats", catService.getTop10());
+
+        return "top";
     }
 }

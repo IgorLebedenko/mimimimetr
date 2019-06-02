@@ -1,0 +1,33 @@
+h1, h3 {
+    text-align: center;
+    font-family: "Calibri Light";
+    color: #333;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border: 3px solid lightgrey;
+    border-radius: 10px;
+}
+
+
+
+.top-list img{
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    margin: 5px 20px;
+}
+
+.top-list li{
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+}
+
+.top-list span{
+    font-size: 20px;
+}

@@ -5,6 +5,7 @@ import app.repository.CatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -15,6 +16,13 @@ public class CatService {
 
 
     public List<Cat> getAllCats() {
-        return catRepository.findAll();
+        List<Cat> cats = catRepository.findAll();
+        Collections.shuffle(cats);
+
+        return cats;
+    }
+
+    public List<Cat> getTop10() {
+        return catRepository.findTop10ByOrderByVotesDesc();
     }
 }

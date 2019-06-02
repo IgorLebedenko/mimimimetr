@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mimimimetr</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <title>Мимимиметр</title>
 </head>
 <body>
-    <h3>Mimimimetr</h3>
+    <h1>Мимимиметр</h1>
+    <h3>Кто из них мимимишнее? Кликни по фотографии!</h3>
     <#list cats as cat>
         <div>
-            ${cat.id}
+            <img src="/img/${cat.filename}"/>
             ${cat.name}
-            ${cat.filename}
-            ${cat.votes}
         </div>
     </#list>
 </body>
