@@ -8,11 +8,15 @@
 <body>
     <h1>Мимимиметр</h1>
     <h3>Кто из них мимимишнее? Кликни по фотографии!</h3>
-    <#list cats as cat>
-        <div>
-            <img src="/img/${cat.filename}"/>
-            ${cat.name}
-        </div>
-    </#list>
+    <div id="container">
+        <form action="/?page=${page + 1}" method="post">
+            <#list cats.pageList as cat>
+                <button class="frame-btn" name="id" value="${cat.id}">
+                    <img src="/img/${cat.filename}"/>
+                    <span class="caption">${cat.name}</span>
+                </button>
+            </#list>
+        </form>
+    </div>
 </body>
 </html>
